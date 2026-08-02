@@ -58,6 +58,6 @@ Bug fixes, UI polish, accessibility, performance tweaks all welcome.
 *   Educational, open-source clone—no affiliation with Apple Inc. Trademarks belong to their owners.
 
 <p align="center">
-  Made with ❤️ by Anukar using AI.
+  Made with ❤️ by Anukarusing AI.
 </p>
 
