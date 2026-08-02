@@ -1,0 +1,20 @@
+workflows:
+  ios-build:
+    name: Build iOS App
+    max_build_duration: 120
+    instance_type: mac_mini_m2
+    environment:
+      vars:
+        XCODE_PROJECT: "iOS26Clone.xcodeproj" # Adjust if it uses .xcworkspace
+        XCODE_SCHEME: "iOS26Clone"             # Replace with your app's main scheme
+    scripts:
+      - name: Build simulator app (No code signing required)
+        script: |
+          xcodebuild build \
+            -project "$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME" \
+            -sdk iphonesimulator \
+            -configuration Debug
+    artifacts:
+      - build/ios/iphonesimulator/*.app
+      
